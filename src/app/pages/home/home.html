@@ -1,0 +1,86 @@
+<div class="up-page">
+
+  <!-- ─── Hero ──────────────────────────────────────────────────────────── -->
+
+  <div class="up-hero">
+    <div class="up-hero__noise"></div>
+
+    <div class="up-hero__inner">
+
+      <!-- Icon -->
+      <div class="up-icon-wrap">
+        @if (serverType()?.icon) {
+          <img [src]="serverType()!.icon" [alt]="typeName()" class="up-icon">
+        } @else {
+          <i class="ri-server-line up-icon--fallback"></i>
+        }
+      </div>
+
+      <!-- Label -->
+      <p class="up-label">
+        {{ lang() === 'en' ? 'You are connected to' : 'Vous êtes connecté sur' }}
+      </p>
+
+      <!-- Server name -->
+      <h1 class="up-name">{{ serverName() }}</h1>
+
+      <!-- Type badge -->
+      @if (serverType()) {
+        <span class="up-badge">{{ typeName() }}</span>
+      }
+
+      <!-- Subtitle -->
+      <p class="up-sub">
+        {{ lang() === 'en'
+          ? 'This server is part of the Tyrolium infrastructure.'
+          : 'Ce serveur fait partie de l\'infrastructure Tyrolium.' }}
+      </p>
+
+      <!-- Links -->
+      <div class="up-links">
+        <a href="https://tyrolium.fr" class="up-btn up-btn--primary">
+          <i class="ri-home-line"></i>
+          {{ lang() === 'en' ? 'Tyrolium.fr' : 'Tyrolium.fr' }}
+        </a>
+        <a href="https://tyrolium.fr/server" class="up-btn up-btn--ghost">
+          <i class="ri-list-check"></i>
+          {{ lang() === 'en' ? 'All servers' : 'Tous les serveurs' }}
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Wave -->
+    <div class="up-hero__wave">
+      <svg viewBox="0 24 150 28" preserveAspectRatio="none">
+        <defs><path id="upw" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"/></defs>
+        <use href="#upw" x="48" y="0" fill="rgba(246,247,251,0.5)"/>
+        <use href="#upw" x="48" y="3" fill="rgba(246,247,251,0.35)"/>
+        <use href="#upw" x="48" y="7" fill="#f6f7fb"/>
+      </svg>
+    </div>
+  </div>
+
+  <!-- ─── SolidServ Banner ───────────────────────────────────────────────── -->
+
+  <div class="up-body">
+    <div class="up-container">
+
+      <a href="https://solidserv.fr" target="_blank" rel="noopener" class="up-solidserv">
+        <div class="up-solidserv__left">
+          <img src="/assets/tyrolium-ui/projects/SolidServ.png" alt="SolidServ" class="up-solidserv__logo">
+          <div>
+            <span class="up-solidserv__title">{{ lang() === 'en' ? 'Need a server?' : 'Besoin d\'un serveur ?' }}</span>
+            <span class="up-solidserv__sub">{{ lang() === 'en' ? 'Rent a VPS or dedicated server via SolidServ — powered by Tyrolium.' : 'Louez un VPS ou un serveur dédié via SolidServ — propulsé par Tyrolium.' }}</span>
+          </div>
+        </div>
+        <span class="up-solidserv__cta">
+          {{ lang() === 'en' ? 'Discover SolidServ' : 'Découvrir SolidServ' }}
+          <i class="ri-arrow-right-line"></i>
+        </span>
+      </a>
+
+    </div>
+  </div>
+
+</div>
