@@ -18,7 +18,7 @@ export class App implements OnInit {
 
   ngOnInit() {
     this.http.get<{ name: string }>('assets/server.json').subscribe(server => {
-      this.titleService.setTitle(`${server.name.toUpperCase()} - TYROLIUM`);
+      this.titleService.setTitle(`${server.name} - Tyrolium / SolidServ`);
     });
   }
 
