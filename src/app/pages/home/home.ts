@@ -13,7 +13,7 @@ const SERVER_TYPES: ServerType[] = [
   { prefix: 'vps',      name: 'VPS',               nameEn: 'VPS',             icon: '/assets/tyrolium-ui/server/vps.png'   },
   { prefix: 'cloud',    name: 'Cloud',             nameEn: 'Cloud',           icon: '/assets/tyrolium-ui/server/cloud.png' },
   { prefix: 'proxy',    name: 'Proxy',             nameEn: 'Proxy',           icon: '/assets/tyrolium-ui/server/proxy.png' },
-  { prefix: 'serv',     name: 'Serveur dédié',     nameEn: 'Dedicated',       icon: '/assets/tyrolium-ui/server/serv.png'  },
+  { prefix: 'serv',     name: 'Serveur dédié',     nameEn: 'Dedicated Server', icon: '/assets/tyrolium-ui/server/serv.png'  },
   { prefix: 'database', name: 'Base de données',   nameEn: 'Database',        icon: '/assets/tyrolium-ui/server/db.png'    },
   { prefix: 'vpn',      name: 'VPN',               nameEn: 'VPN',             icon: '/assets/tyrolium-ui/server/vpn.png'   },
 ];

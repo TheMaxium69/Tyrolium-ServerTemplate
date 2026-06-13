@@ -33,11 +33,13 @@ export class App implements OnInit {
   public pages = computed<ITyroUiNavbarPages[]>(() =>
     this.langService.lang() === 'en'
       ? [
-          { label: 'Tyrolium.fr', href: 'https://tyrolium.fr', icon: 'ri-home-line' },
+          { label: 'Tyrolium', href: 'https://tyrolium.fr', icon: 'ri-home-line' },
+          { label: 'SolidServ', href: 'https://solidserv.fr', icon: 'ri-server-line' },
           { label: 'All servers', href: 'https://tyrolium.fr/server', icon: 'ri-list-check' },
         ]
       : [
-          { label: 'Tyrolium.fr', href: 'https://tyrolium.fr', icon: 'ri-home-line' },
+          { label: 'Tyrolium', href: 'https://tyrolium.fr', icon: 'ri-home-line' },
+          { label: 'SolidServ', href: 'https://solidserv.fr', icon: 'ri-server-line' },
           { label: 'Tous les serveurs', href: 'https://tyrolium.fr/server', icon: 'ri-list-check' },
         ]
   );
