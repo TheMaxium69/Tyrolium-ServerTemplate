@@ -2,11 +2,11 @@ import { Component, inject, computed, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { Title } from '@angular/platform-browser';
-import { ITyroUiNavbarPages, TyroUiFooter, TyroUiNavbar, TyroUiLangService } from 'tyrolium-ui';
+import { ITyroUiNavbarPages, TyroUiFooter, TyroUiNavbar, TyroUiLangService , TyroUiEasterEgg } from 'tyrolium-ui';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, TyroUiNavbar, TyroUiFooter],
+  imports: [RouterOutlet, TyroUiNavbar, TyroUiFooter, TyroUiEasterEgg],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
