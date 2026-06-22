@@ -1,4 +1,4 @@
-import { Component, inject, computed, OnInit } from '@angular/core';
+import { Component, inject, computed, signal, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { Title } from '@angular/platform-browser';
@@ -18,11 +18,12 @@ export class App implements OnInit {
 
   ngOnInit() {
     this.http.get<{ name: string }>('assets/server.json').subscribe(server => {
+      this.PROJECT_NAME.set(server.name);
       this.titleService.setTitle(`${server.name} - Tyrolium / SolidServ`);
     });
   }
 
-  public PROJECT_NAME = 'Tyrolium';
+  public PROJECT_NAME = signal('');
   public PROJECT_LOGO = 'assets/tyrolium-ui/projects/Tyrolium.png';
   public PROJECT_CONTENT = computed(() =>
       this.langService.lang() === 'en'
