@@ -1,0 +1,4 @@
+# Page de statut : non référencée (chaque page porte <meta name="robots" content="noindex">)
+# On laisse explorer pour que les moteurs lisent la balise noindex et désindexent la page.
+User-agent: *
+Allow: /
